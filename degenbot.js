@@ -1,10 +1,13 @@
+var { DANBOORU_USERNAME } = require('./config.js');
+var { DANBOORU_KEY } = require('./config.js');
+var { DISCORD_KEY } = require('./config.js');
 const Discord = require('discord.js');
 const Danbooru = require('danbooru');
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const fs = require('fs').promises;
 const path = require('path');
 const client = new Discord.Client();
-const booru = new Danbooru(config.DANBOORU_USERNAME + ':' + config.DANBOORU_KEY);
+const booru = new Danbooru(DANBOORU_USERNAME + ':' + DANBOORU_KEY);
 const prefix = ".";
 
 
@@ -162,4 +165,4 @@ async function clearCommand(arguments, receivedMessage, number) {
     receivedMessage.channel.bulkDelete(number);
 }
 
-client.login(config.DISCORD_KEY);
+client.login(DISCORD_KEY);
