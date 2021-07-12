@@ -9,6 +9,7 @@ const path = require('path');
 const client = new Discord.Client();
 const booru = new Danbooru(DANBOORU_USERNAME + ':' + DANBOORU_KEY);
 const prefix = ".";
+const blacklist = " -guro -scat -loli -pee -peeing -shota -bestiality -rape "
 
 
 client.on('ready', () => {
@@ -67,22 +68,22 @@ async function helpCommand(arguments, receivedMessage) {
 }
 
 async function plotCommand(arguments, receivedMessage) {
-    let tagList = "order:random -loli -oppai_loli -gothloli ";
+    let tagList = "order:random" + blacklist;
     getPlot(arguments, receivedMessage, tagList);
 }
 
 async function splotCommand(arguments, receivedMessage) {
-    let tagList = "rating:safe order:random -loli -oppai_loli -gothloli ";
+    let tagList = "rating:safe order:random" + blacklist;
     getPlot(arguments, receivedMessage, tagList);
 }
 
 async function qplotCommand(arguments, receivedMessage) {
-    let tagList = "rating:questionable order:random -loli -oppai_loli -gothloli ";
+    let tagList = "rating:questionable order:random" + blacklist;
     getPlot(arguments, receivedMessage, tagList);
 }
 
 async function eplotCommand(arguments, receivedMessage) {
-    let tagList = "rating:explicit order:random -loli -oppai_loli -gothloli ";
+    let tagList = "rating:explicit order:random" + blacklist;
     getPlot(arguments, receivedMessage, tagList);
 }
 
