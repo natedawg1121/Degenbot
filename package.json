@@ -1,0 +1,21 @@
+{
+  "name": "degenbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "degenbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ws": ">=7.4.6",
+    "danbooru": "^3.1.0",
+    "discord": "^0.8.2",
+    "sankaku-api": "^1.0.3"
+  },
+  "devDependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
