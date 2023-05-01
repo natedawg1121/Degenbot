@@ -15,8 +15,9 @@
     "danbooru": "^3.1.0",
     "discord": "^0.8.2",
     "discord-api-types": "^0.23.1",
-    "discord.js": "^14.8.0",
+    "discord.js": "^14.9.0",
     "sankaku-api": "^1.0.3",
-    "ws": ">=7.4.6"
+    "ws": ">=7.4.6",
+    "xmlhttprequest": "^1.8.0"
   }
 }

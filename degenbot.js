@@ -1,13 +1,9 @@
 const { DISCORD_KEY } = require("./config.json");
-const { DANBOORU_USERNAME, DANBOORU_KEY } = require("./config.json");
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
-const Danbooru = require("danbooru");
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const client = new Client({ intents: [GatewayIntentBits.Guilds]});
-const booru = new Danbooru(DANBOORU_USERNAME + ":" + DANBOORU_KEY);
-const blacklist = "-guro -scat -loli -shota -bestiality "
 
 //Command Importing
 client.commands = new Collection();
